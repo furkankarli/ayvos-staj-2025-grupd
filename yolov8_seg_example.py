@@ -60,8 +60,10 @@ for i, cls_id in enumerate(classes):
 
 if semantic_mask.sum() == 0:
     print(
-        f"No masks found for class id {target_class}. Using all detected masks instead."
+        f"No masks found for class id {target_class}. "
+        "Using all detected masks instead."
     )
+
     # Option 2: fallback to all masks combined
     semantic_mask = np.zeros_like(masks[0], dtype=bool)
     for i in range(len(classes)):
