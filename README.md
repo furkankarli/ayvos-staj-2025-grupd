@@ -34,7 +34,7 @@ Her klasör ayrı bir ödevi temsil eder.
 | **3. Lint & Test**  | `pre-commit run --all-files` (isteğe bağlı)                                |
 | **4. Commit**       | `bash<br>git add .<br>git commit -m "feat: kısa açıklama"`                 |
 | **5. Push & PR**    | `bash<br>git push -u origin ad-soyad/ozellik`<br>GitHub’da Pull Request aç |
-| **6. Onay & Merge** | En az **1 onay** + **PEP8 Check** yeşil → `main`’e merge                   |
+| **6. Onay & Merge** | En az **2 onay** + **PEP8 Check** yeşil → `main`’e merge                   |
 
 ---
 
