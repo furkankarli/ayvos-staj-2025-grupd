@@ -21,7 +21,7 @@ def run_segmentation(image_path, model_path='yolo11x-seg.pt'):
 
     image = cv2.imread(image_path)
 
-    results = model.predict(image, conf=0.5)
+    results = model.predict(image, conf=0.85)
     result = results[0]
 
     instance_image = result.plot()
