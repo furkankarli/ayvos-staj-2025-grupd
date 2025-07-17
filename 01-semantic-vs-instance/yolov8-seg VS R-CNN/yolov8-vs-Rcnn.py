@@ -58,24 +58,37 @@ fig, axs = plt.subplots(2, 2, figsize=(12, 10))
 axs[0, 0].imshow(image_rgb)
 axs[0, 0].set_title("YOLOv8 - Instance Segmentation")
 for mask in instance_masks_yolo:
-    axs[0, 0].imshow(np.ma.masked_where(mask < 0.5, mask), cmap="Greens", alpha=0.5)
+    axs[0, 0].imshow(
+        np.ma.masked_where(mask < 0.5, mask),
+        cmap="Greens",
+        alpha=0.5,
+    )
 
 axs[0, 1].imshow(image_rgb)
 axs[0, 1].set_title("Mask R-CNN - Instance Segmentation")
 for mask in instance_masks_rcnn:
-    axs[0, 1].imshow(np.ma.masked_where(mask < 0.5, mask), cmap="Reds", alpha=0.5)
+    axs[0, 1].imshow(
+        np.ma.masked_where(mask < 0.5, mask),
+        cmap="Reds",
+        alpha=0.5,
+    )
 
 axs[1, 0].imshow(image_rgb)
 axs[1, 0].set_title("YOLOv8 - Semantic Segmentation (benzeri)")
 axs[1, 0].imshow(
-    np.ma.masked_where(semantic_yolo < 0.5, semantic_yolo), cmap="Greens", alpha=0.5
+    np.ma.masked_where(semantic_yolo < 0.5, semantic_yolo),
+    cmap="Greens",
+    alpha=0.5,
 )
 
 axs[1, 1].imshow(image_rgb)
 axs[1, 1].set_title("Mask R-CNN - Semantic Segmentation (benzeri)")
 axs[1, 1].imshow(
-    np.ma.masked_where(semantic_rcnn < 0.5, semantic_rcnn), cmap="Reds", alpha=0.5
+    np.ma.masked_where(semantic_rcnn < 0.5, semantic_rcnn),
+    cmap="Reds",
+    alpha=0.5,
 )
+
 
 for ax in axs.flat:
     ax.axis("off")
