@@ -8,7 +8,7 @@ import torchvision.transforms as T
 from torchvision.models.detection import maskrcnn_resnet50_fpn
 from ultralytics import YOLO
 
-image_path = "01-semantic-vs-instance/yolov8-seg VS R-CNN/photo.jpg"  # Deneme görseli
+image_path = "YOUR_PATH.jpg"  # Deneme görseli
 image = cv2.imread(image_path)
 image_rgb = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
 
