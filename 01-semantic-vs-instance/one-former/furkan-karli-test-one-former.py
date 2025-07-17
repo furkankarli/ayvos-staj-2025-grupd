@@ -9,7 +9,7 @@ from transformers import OneFormerForUniversalSegmentation, OneFormerProcessor
 
 class OneFormerSegmentationComparison:
     def __init__(self):
-        """OneFormer modelini ve processor'ı yükle"""
+        """OneFormer modelini ve processor'ı yükler"""
         print("OneFormer modeli yükleniyor...")
 
         # COCO dataset için eğitilmiş OneFormer modeli
