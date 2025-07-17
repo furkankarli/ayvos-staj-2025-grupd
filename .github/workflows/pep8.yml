@@ -24,10 +24,10 @@ jobs:
           pip install black isort flake8
 
       - name: Run Black
-        run: black --check --diff .
+        run: black --check --diff --line-length 88 .
 
       - name: Run Isort
-        run: isort --check-only --diff .
+        run: isort --check-only --diff --line-length 88 .
 
       - name: Run Flake8
-        run: flake8 .
+        run: flake8 --max-line-length=88 --extend-ignore=E203,W503 .
