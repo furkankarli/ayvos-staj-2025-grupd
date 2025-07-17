@@ -81,6 +81,7 @@ axs[1, 0].imshow(
     alpha=0.5,
 )
 
+
 axs[1, 1].imshow(image_rgb)
 axs[1, 1].set_title("Mask R-CNN - Semantic Segmentation (benzeri)")
 axs[1, 1].imshow(
