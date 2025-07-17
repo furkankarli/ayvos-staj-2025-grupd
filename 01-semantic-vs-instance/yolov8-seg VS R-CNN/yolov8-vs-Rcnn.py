@@ -96,3 +96,4 @@ for ax in axs.flat:
 
 plt.tight_layout()
 plt.show()
+# Bu kadar
