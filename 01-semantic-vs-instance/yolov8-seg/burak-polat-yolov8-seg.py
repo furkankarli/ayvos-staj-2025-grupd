@@ -27,7 +27,7 @@ def put_label(img, label):
 
 
 # Use your local image path here:
-image_path = r"D:\PycharmProjects\Staj\ayvos-staj-2025-grupd\cat.jpg"
+image_path = r"D:\PycharmProjects\Staj\ayvos-staj-2025-grupd\test.jpg"
 
 # Load model
 model = YOLO("yolov8n-seg.pt")
