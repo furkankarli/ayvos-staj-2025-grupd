@@ -1,7 +1,8 @@
 import cv2
+import matplotlib.pyplot as plt
 import numpy as np
 from ultralytics import YOLO
-import matplotlib.pyplot as plt
+
 
 def put_label(img, label):
     h, w = img.shape[:2]
@@ -13,10 +14,20 @@ def put_label(img, label):
     text_size = cv2.getTextSize(label, font, font_scale, font_thickness)[0]
     text_x = (w - text_size[0]) // 2
     text_y = 30
-    cv2.putText(labeled_img, label, (text_x, text_y), font, font_scale, (0, 0, 0), font_thickness, cv2.LINE_AA)
+    cv2.putText(
+        labeled_img,
+        label,
+        (text_x, text_y),
+        font,
+        font_scale,
+        (0, 0, 0),
+        font_thickness,
+        cv2.LINE_AA,
+    )
     return labeled_img
 
-def run_segmentation(image_path, model_path='yolo11x-seg.pt'):
+
+def run_segmentation(image_path, model_path="yolo11x-seg.pt"):
     model = YOLO(model_path)
 
     image = cv2.imread(image_path)
@@ -67,6 +78,7 @@ def run_segmentation(image_path, model_path='yolo11x-seg.pt'):
 
     plt.tight_layout()
     plt.show()
+
 
 if __name__ == "__main__":
     image_path = "test.png"
