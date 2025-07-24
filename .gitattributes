@@ -1,0 +1,2 @@
+Not[[:space:]]in[[:space:]]a[[:space:]]Git[[:space:]]repository. filter=lfs diff=lfs merge=lfs -text
+/Users/goktani/Documents/GitHub/ayvos-staj-2025-grupd/02-OpenCLIP-DINOv2-ResNet/DINOv2/dinov2_finetuned_car5.pth filter=lfs diff=lfs merge=lfs -text
