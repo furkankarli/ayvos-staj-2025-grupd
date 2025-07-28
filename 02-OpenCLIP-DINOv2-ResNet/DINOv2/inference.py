@@ -1,10 +1,7 @@
 import os
-
 import numpy as np
 import torch
 from PIL import Image
-
-# ---- SINIF İSİMLERİNİ YÜKLE (Klasör sıralı mapping!) ----
 from torchvision import datasets, transforms
 from transformers import Dinov2ForImageClassification
 
