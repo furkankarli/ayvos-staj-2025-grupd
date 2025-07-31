@@ -1,0 +1,79 @@
+{
+  "metrics": {
+    "overall_accuracy": 0.35795454545454547,
+    "class_accuracies": {
+      "alfa-romeo-giulia": 0.75,
+      "audi-a4": 0.25,
+      "audi-a6": 0.0,
+      "bmw-3-series": 0.75,
+      "bmw-x3": 0.5,
+      "citroen-c3": 0.0,
+      "citroen-c4-grand-picasso": 0.0,
+      "dacia-logan": 0.75,
+      "dacia-spring": 0.0,
+      "fiat-bravo": 0.0,
+      "ford-fiesta": 0.0,
+      "ford-focus": 0.0,
+      "ford-fusion": 0.0,
+      "ford-mondeo": 0.0,
+      "ford-transit": 1.0,
+      "honda-civic": 0.75,
+      "hyundai-i30": 0.25,
+      "kia-sportage": 1.0,
+      "maserati-levante": 1.0,
+      "mazda-2": 0.5,
+      "mini-countryman": 1.0,
+      "mitsubishi-l200": 1.0,
+      "opel-astra": 0.0,
+      "opel-corsa": 0.0,
+      "opel-meriva": 0.25,
+      "peugeot-208": 0.0,
+      "peugeot-3008": 0.25,
+      "renault-captur": 0.75,
+      "seat-ibiza": 0.0,
+      "seat-leon": 0.0,
+      "skoda-fabia": 0.0,
+      "skoda-octavia": 0.0,
+      "skoda-superb": 0.0,
+      "smart-forfour": 0.0,
+      "smart-fortwo": 1.0,
+      "suzuki-sx4-s-cross": 0.0,
+      "suzuki-vitara": 0.5,
+      "tesla-s": 1.0,
+      "toyota-c-hr": 0.25,
+      "toyota-corolla": 0.25,
+      "toyota-yaris": 1.0,
+      "volkswagen-golf": 0.0,
+      "volkswagen-passat": 0.75,
+      "volkswagen-polo": 0.25
+    },
+    "num_samples": 176
+  },
+  "angle_results": {
+    "0": {
+      "accuracy": 0.4090909090909091,
+      "avg_confidence": 0.02393271384591406,
+      "num_samples": 44
+    },
+    "90": {
+      "accuracy": 0.3409090909090909,
+      "avg_confidence": 0.0237807094712149,
+      "num_samples": 44
+    },
+    "180": {
+      "accuracy": 0.36363636363636365,
+      "avg_confidence": 0.023764256472614678,
+      "num_samples": 44
+    },
+    "270": {
+      "accuracy": 0.3181818181818182,
+      "avg_confidence": 0.023850683588534594,
+      "num_samples": 44
+    }
+  },
+  "model_info": {
+    "model_name": "ViT-B-32",
+    "pretrained": "openai",
+    "num_classes": 44
+  }
+}
