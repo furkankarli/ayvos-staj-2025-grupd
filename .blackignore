@@ -1,0 +1,6 @@
+input/
+dataset/
+*.jpg
+*.jpeg
+*.png
+*.pth
