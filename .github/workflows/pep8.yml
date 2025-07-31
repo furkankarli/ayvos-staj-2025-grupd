@@ -23,8 +23,9 @@ jobs:
           python -m pip install --upgrade pip
           pip install black isort flake8
 
-      - name: Run Black
-        run: black --check --diff .
+      - - name: Run black
+          run: black --check --diff --line-length 88 $(git ls-files '*.py')
+
 
       - name: Run Isort
         run: isort --check-only --diff .
