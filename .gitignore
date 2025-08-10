@@ -1,2 +1,11 @@
+# Ignore dataset folders/files
 dataset*
+
+# Ignore PyTorch model files
 *.pt
+
+# macOS system files
+.DS_Store
+
+# Git internal files (genellikle git zaten görmez, ama ekleyebilirsin)
+.git/
