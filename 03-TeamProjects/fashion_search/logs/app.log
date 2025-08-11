@@ -1,0 +1,296 @@
+2025-08-04 16:41:10 | INFO     | app.utils:setup_logger:60 - Logger configured for Fashion Search API v1.0.0
+2025-08-04 16:41:10 | INFO     | __main__:<module>:17 - Starting Fashion Search API v1.0.0 on 0.0.0.0:8000
+2025-08-04 16:41:10 | INFO     | __main__:<module>:42 - Uygulama başlatılıyor: http://0.0.0.0:8000
+2025-08-04 16:41:10 | INFO     | __main__:<module>:43 - Swagger UI: http://0.0.0.0:8000/docs
+2025-08-04 16:41:10 | INFO     | app.main:<module>:17 - Starting Fashion Search API v1.0.0 on 0.0.0.0:8000
+2025-08-04 16:41:17 | INFO     | app.main:home:21 - Home page accessed
+2025-08-04 16:41:23 | INFO     | app.main:home:21 - Home page accessed
+2025-08-04 16:42:33 | INFO     | app.utils:setup_logger:60 - Logger configured for Fashion Search API v1.0.0
+2025-08-04 16:42:33 | INFO     | __main__:<module>:20 - FastAPI uygulaması başlatıldı: Fashion Search API v1.0.0
+2025-08-04 16:42:33 | INFO     | __main__:<module>:47 - Uygulama başlatılıyor: http://0.0.0.0:8000
+2025-08-04 16:42:33 | INFO     | __main__:<module>:48 - Swagger UI: http://0.0.0.0:8000/docs
+2025-08-04 16:42:33 | INFO     | app.main:<module>:20 - FastAPI uygulaması başlatıldı: Fashion Search API v1.0.0
+2025-08-04 16:42:36 | INFO     | app.main:home:25 - Ana sayfa istendi
+2025-08-04 16:42:38 | INFO     | app.main:home:25 - Ana sayfa istendi
+2025-08-06 11:22:55 | INFO     | app.utils:setup_logger:60 - Logger configured for Fashion Search API v1.0.0
+2025-08-06 11:22:55 | INFO     | __main__:<module>:20 - FastAPI uygulaması başlatıldı: Fashion Search API v1.0.0
+2025-08-06 11:22:55 | INFO     | __main__:<module>:47 - Uygulama başlatılıyor: http://0.0.0.0:8000
+2025-08-06 11:22:55 | INFO     | __main__:<module>:48 - Swagger UI: http://0.0.0.0:8000/docs
+2025-08-06 11:22:55 | INFO     | app.main:<module>:20 - FastAPI uygulaması başlatıldı: Fashion Search API v1.0.0
+2025-08-06 11:23:04 | INFO     | app.main:home:25 - Ana sayfa istendi
+2025-08-06 11:24:27 | INFO     | app.main:home:25 - Ana sayfa istendi
+2025-08-06 11:24:29 | INFO     | app.main:home:25 - Ana sayfa istendi
+2025-08-06 11:24:32 | INFO     | app.main:home:25 - Ana sayfa istendi
+2025-08-06 11:24:38 | INFO     | app.utils:setup_logger:60 - Logger configured for Fashion Search API v1.0.0
+2025-08-06 11:24:38 | INFO     | __main__:<module>:20 - FastAPI uygulaması başlatıldı: Fashion Search API v1.0.0
+2025-08-06 11:24:38 | INFO     | __main__:<module>:47 - Uygulama başlatılıyor: http://0.0.0.0:8000
+2025-08-06 11:24:38 | INFO     | __main__:<module>:48 - Swagger UI: http://0.0.0.0:8000/docs
+2025-08-06 11:24:38 | INFO     | app.main:<module>:20 - FastAPI uygulaması başlatıldı: Fashion Search API v1.0.0
+2025-08-06 11:24:41 | INFO     | app.main:home:25 - Ana sayfa istendi
+2025-08-06 11:24:42 | INFO     | app.main:home:25 - Ana sayfa istendi
+2025-08-06 11:25:12 | INFO     | app.utils:setup_logger:60 - Logger configured for Fashion Search API v1.0.0
+2025-08-06 11:25:12 | INFO     | __main__:<module>:20 - FastAPI uygulaması başlatıldı: Fashion Search API v1.0.0
+2025-08-06 11:25:12 | INFO     | __main__:<module>:47 - Uygulama başlatılıyor: http://0.0.0.0:8000
+2025-08-06 11:25:12 | INFO     | __main__:<module>:48 - Swagger UI: http://0.0.0.0:8000/docs
+2025-08-06 11:25:12 | INFO     | app.main:<module>:20 - FastAPI uygulaması başlatıldı: Fashion Search API v1.0.0
+2025-08-06 11:25:16 | INFO     | app.main:home:25 - Ana sayfa istendi
+2025-08-06 11:53:51 | INFO     | app.utils:setup_logger:60 - Logger configured for Fashion Search API v1.0.0
+2025-08-06 11:53:51 | INFO     | __main__:<module>:20 - FastAPI uygulaması başlatıldı: Fashion Search API v1.0.0
+2025-08-06 11:53:51 | INFO     | __main__:<module>:47 - Uygulama başlatılıyor: http://0.0.0.0:8000
+2025-08-06 11:53:51 | INFO     | __main__:<module>:48 - Swagger UI: http://0.0.0.0:8000/docs
+2025-08-06 11:53:51 | INFO     | app.main:<module>:20 - FastAPI uygulaması başlatıldı: Fashion Search API v1.0.0
+2025-08-06 11:53:54 | INFO     | app.main:home:25 - Ana sayfa istendi
+2025-08-06 11:53:58 | INFO     | app.main:home:25 - Ana sayfa istendi
+2025-08-06 11:54:00 | INFO     | app.main:health_check:35 - Sağlık kontrolü yapıldı
+2025-08-06 12:00:49 | INFO     | app.main:home:25 - Ana sayfa istendi
+2025-08-06 12:04:11 | INFO     | app.utils:setup_logger:60 - Logger configured for Fashion Search API v1.0.0
+2025-08-06 12:04:11 | INFO     | __main__:<module>:20 - FastAPI uygulaması başlatıldı: Fashion Search API v1.0.0
+2025-08-06 12:04:11 | INFO     | __main__:<module>:47 - Uygulama başlatılıyor: http://0.0.0.0:8000
+2025-08-06 12:04:11 | INFO     | __main__:<module>:48 - Swagger UI: http://0.0.0.0:8000/docs
+2025-08-06 12:04:11 | INFO     | app.main:<module>:20 - FastAPI uygulaması başlatıldı: Fashion Search API v1.0.0
+2025-08-06 12:04:17 | INFO     | app.main:home:25 - Ana sayfa istendi
+2025-08-06 12:04:44 | INFO     | app.utils:setup_logger:60 - Logger configured for Fashion Search API v1.0.0
+2025-08-06 12:04:45 | INFO     | __main__:initialize:222 - Arama motoru başlatılıyor...
+2025-08-06 12:04:45 | INFO     | __main__:load_model:53 - OpenCLIP modeli yükleniyor: ViT-B-32
+2025-08-06 12:04:47 | INFO     | __main__:load_model:65 - Model yüklendi. Cihaz: cuda
+2025-08-06 12:04:47 | INFO     | __main__:download_dataset:25 - Fashion-MNIST indiriliyor: ./data/fashion
+2025-08-06 12:04:52 | INFO     | __main__:download_dataset:34 - Veri seti indirildi: 60000 örnek
+2025-08-06 12:04:52 | WARNING  | __main__:load_embeddings:196 - Embedding dosyası bulunamadı: ./data/embeddings/embeddings.npy
+2025-08-06 12:04:52 | INFO     | __main__:initialize:235 - Embedding'ler hesaplanıyor...
+2025-08-06 12:04:52 | INFO     | __main__:_compute_embeddings:261 - Embedding hesaplamaya başlanıyor...
+2025-08-06 12:11:10 | INFO     | __main__:_compute_embeddings:300 - Embedding hesaplama tamamlandı. Şekil: (60000, 512)
+2025-08-06 12:11:10 | ERROR    | __main__:_compute_embeddings:308 - Embedding hesaplama hatası: [Errno 2] No such file or directory: './data/embeddings/labels.npy'
+2025-08-06 12:11:10 | ERROR    | __main__:initialize:256 - Arama motoru başlatma hatası: [Errno 2] No such file or directory: './data/embeddings/labels.npy'
+2025-08-06 12:11:10 | ERROR    | __main__:<module>:379 - Test hatası: Arama motoru başlatılmadı!
+2025-08-06 12:11:23 | INFO     | app.utils:setup_logger:60 - Logger configured for Fashion Search API v1.0.0
+2025-08-06 12:11:23 | INFO     | __main__:initialize:222 - Arama motoru başlatılıyor...
+2025-08-06 12:11:23 | INFO     | __main__:load_model:53 - OpenCLIP modeli yükleniyor: ViT-B-32
+2025-08-06 12:11:25 | INFO     | __main__:load_model:65 - Model yüklendi. Cihaz: cuda
+2025-08-06 12:11:25 | INFO     | __main__:download_dataset:25 - Fashion-MNIST indiriliyor: ./data/fashion
+2025-08-06 12:11:25 | INFO     | __main__:download_dataset:34 - Veri seti indirildi: 60000 örnek
+2025-08-06 12:11:25 | WARNING  | __main__:load_embeddings:196 - Embedding dosyası bulunamadı: ./data/embeddings/embeddings.npy
+2025-08-06 12:11:25 | INFO     | __main__:initialize:235 - Embedding'ler hesaplanıyor...
+2025-08-06 12:11:25 | INFO     | __main__:_compute_embeddings:261 - Embedding hesaplamaya başlanıyor...
+2025-08-06 12:15:50 | INFO     | app.utils:setup_logger:60 - Logger configured for Fashion Search API v1.0.0
+2025-08-06 12:15:51 | INFO     | __main__:initialize:222 - Arama motoru başlatılıyor...
+2025-08-06 12:15:51 | INFO     | __main__:load_model:53 - OpenCLIP modeli yükleniyor: ViT-B-32
+2025-08-06 12:15:53 | INFO     | __main__:load_model:65 - Model yüklendi. Cihaz: cuda
+2025-08-06 12:15:53 | INFO     | __main__:download_dataset:25 - Fashion-MNIST indiriliyor: ./data/fashion
+2025-08-06 12:15:53 | INFO     | __main__:download_dataset:34 - Veri seti indirildi: 60000 örnek
+2025-08-06 12:15:53 | WARNING  | __main__:load_embeddings:196 - Embedding dosyası bulunamadı: ./data/embeddings/embeddings.npy
+2025-08-06 12:15:53 | INFO     | __main__:initialize:235 - Embedding'ler hesaplanıyor...
+2025-08-06 12:15:53 | INFO     | __main__:_compute_embeddings:261 - Embedding hesaplamaya başlanıyor...
+2025-08-06 12:20:32 | INFO     | __main__:_compute_embeddings:300 - Embedding hesaplama tamamlandı. Şekil: (60000, 512)
+2025-08-06 12:20:32 | INFO     | __main__:save_embeddings:184 - Embedding'ler kaydedildi: ./data/embeddings/embeddings.npy
+2025-08-06 12:20:32 | INFO     | __main__:create_index:114 - FAISS indeksi oluşturuluyor. Boyut: (60000, 512)
+2025-08-06 12:20:32 | INFO     | __main__:create_index:124 - İndeks oluşturuldu. Toplam vektör: 60000
+2025-08-06 12:20:32 | INFO     | __main__:save_index:137 - İndeks kaydedildi: ./data/embeddings/faiss.index
+2025-08-06 12:20:32 | INFO     | __main__:initialize:252 - Arama motoru başarıyla başlatıldı!
+2025-08-06 12:20:32 | INFO     | __main__:search_similar:320 - Benzer ürünler aranıyor...
+2025-08-06 12:20:32 | INFO     | __main__:search_similar:347 - 3 benzer ürün bulundu
+2025-08-06 12:23:32 | INFO     | app.utils:setup_logger:60 - Logger configured for Fashion Search API v1.0.0
+2025-08-06 12:23:35 | INFO     | __main__:<module>:24 - FastAPI uygulaması başlatıldı: Fashion Search API v1.0.0
+2025-08-06 12:24:00 | INFO     | app.utils:setup_logger:60 - Logger configured for Fashion Search API v1.0.0
+2025-08-06 12:24:02 | INFO     | __main__:<module>:24 - FastAPI uygulaması başlatıldı: Fashion Search API v1.0.0
+2025-08-06 12:24:02 | INFO     | __main__:<module>:176 - Uygulama başlatılıyor: http://0.0.0.0:8000
+2025-08-06 12:24:02 | INFO     | __main__:<module>:177 - Swagger UI: http://0.0.0.0:8000/docs
+2025-08-06 12:24:02 | INFO     | app.main:<module>:24 - FastAPI uygulaması başlatıldı: Fashion Search API v1.0.0
+2025-08-06 12:24:05 | INFO     | app.main:home:29 - Ana sayfa istendi
+2025-08-06 12:24:07 | INFO     | app.models:initialize:222 - Arama motoru başlatılıyor...
+2025-08-06 12:24:07 | INFO     | app.models:load_model:53 - OpenCLIP modeli yükleniyor: ViT-B-32
+2025-08-06 12:24:08 | INFO     | app.models:load_model:65 - Model yüklendi. Cihaz: cuda
+2025-08-06 12:24:08 | INFO     | app.models:download_dataset:25 - Fashion-MNIST indiriliyor: ./data/fashion
+2025-08-06 12:24:08 | INFO     | app.models:download_dataset:34 - Veri seti indirildi: 60000 örnek
+2025-08-06 12:24:08 | INFO     | app.models:load_embeddings:200 - Embedding'ler yüklendi: ./data/embeddings/embeddings.npy
+2025-08-06 12:24:08 | INFO     | app.models:load_embeddings:201 - Embedding şekli: (60000, 512)
+2025-08-06 12:24:08 | INFO     | app.models:load_index:153 - İndeks yüklendi: ./data/embeddings/faiss.index
+2025-08-06 12:24:08 | INFO     | app.models:load_index:154 - Toplam vektör: 60000
+2025-08-06 12:24:08 | INFO     | app.models:initialize:252 - Arama motoru başarıyla başlatıldı!
+2025-08-06 12:24:08 | INFO     | app.main:home:29 - Ana sayfa istendi
+2025-08-06 12:24:50 | INFO     | app.main:search_similar_products:88 - Arama isteği alındı: outdoor-t-shirt-basic-pamuklu-erkek-uzun-kollu-tisort-terletmez-sifir-yaka-baseti05-tshirt-vav-wear-5510-15-B.jpg
+2025-08-06 12:24:50 | ERROR    | app.main:search_similar_products:138 - Arama hatası: name 'convert' is not defined
+2025-08-06 12:24:54 | INFO     | app.main:search_similar_products:88 - Arama isteği alındı: outdoor-t-shirt-basic-pamuklu-erkek-uzun-kollu-tisort-terletmez-sifir-yaka-baseti05-tshirt-vav-wear-5510-15-B.jpg
+2025-08-06 12:24:54 | ERROR    | app.main:search_similar_products:138 - Arama hatası: name 'convert' is not defined
+2025-08-06 12:29:31 | INFO     | app.utils:setup_logger:60 - Logger configured for Fashion Search API v1.0.0
+2025-08-06 12:29:33 | INFO     | __main__:<module>:24 - FastAPI uygulaması başlatıldı: Fashion Search API v1.0.0
+2025-08-06 12:29:33 | INFO     | __main__:<module>:176 - Uygulama başlatılıyor: http://0.0.0.0:8000
+2025-08-06 12:29:33 | INFO     | __main__:<module>:177 - Swagger UI: http://0.0.0.0:8000/docs
+2025-08-06 12:29:33 | INFO     | app.main:<module>:24 - FastAPI uygulaması başlatıldı: Fashion Search API v1.0.0
+2025-08-06 12:29:37 | INFO     | app.main:home:29 - Ana sayfa istendi
+2025-08-06 12:29:37 | INFO     | app.models:initialize:222 - Arama motoru başlatılıyor...
+2025-08-06 12:29:37 | INFO     | app.models:load_model:53 - OpenCLIP modeli yükleniyor: ViT-B-32
+2025-08-06 12:29:38 | INFO     | app.models:load_model:65 - Model yüklendi. Cihaz: cuda
+2025-08-06 12:29:38 | INFO     | app.models:download_dataset:25 - Fashion-MNIST indiriliyor: ./data/fashion
+2025-08-06 12:29:38 | INFO     | app.models:download_dataset:34 - Veri seti indirildi: 60000 örnek
+2025-08-06 12:29:38 | INFO     | app.models:load_embeddings:200 - Embedding'ler yüklendi: ./data/embeddings/embeddings.npy
+2025-08-06 12:29:38 | INFO     | app.models:load_embeddings:201 - Embedding şekli: (60000, 512)
+2025-08-06 12:29:38 | INFO     | app.models:load_index:153 - İndeks yüklendi: ./data/embeddings/faiss.index
+2025-08-06 12:29:38 | INFO     | app.models:load_index:154 - Toplam vektör: 60000
+2025-08-06 12:29:38 | INFO     | app.models:initialize:252 - Arama motoru başarıyla başlatıldı!
+2025-08-06 12:29:45 | INFO     | app.main:search_similar_products:88 - Arama isteği alındı: outdoor-t-shirt-basic-pamuklu-erkek-uzun-kollu-tisort-terletmez-sifir-yaka-baseti05-tshirt-vav-wear-5510-15-B.jpg
+2025-08-06 12:29:45 | INFO     | app.models:search_similar:320 - Benzer ürünler aranıyor...
+2025-08-06 12:29:45 | INFO     | app.models:search_similar:347 - 5 benzer ürün bulundu
+2025-08-06 12:29:45 | INFO     | app.main:search_similar_products:120 - Arama tamamlandı: 5 sonuç, 0.1307s
+2025-08-06 12:33:58 | INFO     | app.main:home:29 - Ana sayfa istendi
+2025-08-06 12:34:05 | INFO     | app.main:search_similar_products:88 - Arama isteği alındı: outdoor-t-shirt-basic-pamuklu-erkek-uzun-kollu-tisort-terletmez-sifir-yaka-baseti05-tshirt-vav-wear-5510-15-B.jpg
+2025-08-06 12:34:05 | INFO     | app.models:search_similar:320 - Benzer ürünler aranıyor...
+2025-08-06 12:34:05 | INFO     | app.models:search_similar:347 - 5 benzer ürün bulundu
+2025-08-06 12:34:05 | INFO     | app.main:search_similar_products:120 - Arama tamamlandı: 5 sonuç, 0.0208s
+2025-08-06 12:34:10 | INFO     | app.main:home:29 - Ana sayfa istendi
+2025-08-06 12:38:31 | INFO     | app.main:home:29 - Ana sayfa istendi
+2025-08-06 12:38:36 | INFO     | app.main:search_similar_products:88 - Arama isteği alındı: Screenshot from 2025-08-06 12-31-28.png
+2025-08-06 12:38:37 | INFO     | app.models:search_similar:320 - Benzer ürünler aranıyor...
+2025-08-06 12:38:37 | INFO     | app.models:search_similar:347 - 5 benzer ürün bulundu
+2025-08-06 12:38:37 | INFO     | app.main:search_similar_products:120 - Arama tamamlandı: 5 sonuç, 0.0346s
+2025-08-06 12:43:49 | INFO     | app.utils:setup_logger:60 - Logger configured for Fashion Search API v1.0.0
+2025-08-06 12:43:51 | INFO     | __main__:<module>:26 - FastAPI uygulaması başlatıldı: Fashion Search API v1.0.0
+2025-08-06 12:43:51 | INFO     | __main__:<module>:234 - Uygulama başlatılıyor: http://0.0.0.0:8000
+2025-08-06 12:43:51 | INFO     | __main__:<module>:235 - Swagger UI: http://0.0.0.0:8000/docs
+2025-08-06 12:43:51 | INFO     | app.main:<module>:26 - FastAPI uygulaması başlatıldı: Fashion Search API v1.0.0
+2025-08-06 12:43:51 | INFO     | app.main:home:62 - Ana sayfa istendi
+2025-08-06 12:43:51 | INFO     | app.models:initialize:222 - Arama motoru başlatılıyor...
+2025-08-06 12:43:51 | INFO     | app.models:load_model:53 - OpenCLIP modeli yükleniyor: ViT-B-32
+2025-08-06 12:43:53 | INFO     | app.models:load_model:65 - Model yüklendi. Cihaz: cuda
+2025-08-06 12:43:53 | INFO     | app.models:download_dataset:25 - Fashion-MNIST indiriliyor: ./data/fashion
+2025-08-06 12:43:53 | INFO     | app.models:download_dataset:34 - Veri seti indirildi: 60000 örnek
+2025-08-06 12:43:53 | INFO     | app.models:load_embeddings:200 - Embedding'ler yüklendi: ./data/embeddings/embeddings.npy
+2025-08-06 12:43:53 | INFO     | app.models:load_embeddings:201 - Embedding şekli: (60000, 512)
+2025-08-06 12:43:53 | INFO     | app.models:load_index:153 - İndeks yüklendi: ./data/embeddings/faiss.index
+2025-08-06 12:43:53 | INFO     | app.models:load_index:154 - Toplam vektör: 60000
+2025-08-06 12:43:53 | INFO     | app.models:initialize:252 - Arama motoru başarıyla başlatıldı!
+2025-08-06 12:44:00 | INFO     | app.main:search_similar_products:122 - Arama isteği alındı: outdoor-t-shirt-basic-pamuklu-erkek-uzun-kollu-tisort-terletmez-sifir-yaka-baseti05-tshirt-vav-wear-5510-15-B.jpg
+2025-08-06 12:44:00 | INFO     | app.main:search_similar_products:140 - Orijinal resim base64 uzunluğu: 258758
+2025-08-06 12:44:00 | INFO     | app.models:search_similar:320 - Benzer ürünler aranıyor...
+2025-08-06 12:44:00 | INFO     | app.models:search_similar:347 - 5 benzer ürün bulundu
+2025-08-06 12:44:00 | INFO     | app.main:search_similar_products:157 - Sonuç 1 işleniyor...
+2025-08-06 12:44:00 | INFO     | app.main:search_similar_products:162 - Sonuç 1 base64 uzunluğu: 634
+2025-08-06 12:44:00 | INFO     | app.main:search_similar_products:157 - Sonuç 2 işleniyor...
+2025-08-06 12:44:00 | INFO     | app.main:search_similar_products:162 - Sonuç 2 base64 uzunluğu: 682
+2025-08-06 12:44:00 | INFO     | app.main:search_similar_products:157 - Sonuç 3 işleniyor...
+2025-08-06 12:44:00 | INFO     | app.main:search_similar_products:162 - Sonuç 3 base64 uzunluğu: 642
+2025-08-06 12:44:00 | INFO     | app.main:search_similar_products:157 - Sonuç 4 işleniyor...
+2025-08-06 12:44:00 | INFO     | app.main:search_similar_products:162 - Sonuç 4 base64 uzunluğu: 730
+2025-08-06 12:44:00 | INFO     | app.main:search_similar_products:157 - Sonuç 5 işleniyor...
+2025-08-06 12:44:00 | INFO     | app.main:search_similar_products:162 - Sonuç 5 base64 uzunluğu: 618
+2025-08-06 12:44:00 | INFO     | app.main:search_similar_products:167 - Arama tamamlandı: 5 sonuç, 0.1851s
+2025-08-06 12:46:00 | INFO     | app.main:home:62 - Ana sayfa istendi
+2025-08-06 12:55:01 | INFO     | app.main:home:62 - Ana sayfa istendi
+2025-08-06 12:55:01 | INFO     | app.main:health_check:93 - Sağlık kontrolü yapıldı
+2025-08-06 12:55:15 | INFO     | app.main:search_similar_products:122 - Arama isteği alındı: outdoor-t-shirt-basic-pamuklu-erkek-uzun-kollu-tisort-terletmez-sifir-yaka-baseti05-tshirt-vav-wear-5510-15-B.jpg
+2025-08-06 12:55:15 | INFO     | app.main:search_similar_products:140 - Orijinal resim base64 uzunluğu: 258758
+2025-08-06 12:55:15 | INFO     | app.models:search_similar:320 - Benzer ürünler aranıyor...
+2025-08-06 12:55:15 | INFO     | app.models:search_similar:347 - 5 benzer ürün bulundu
+2025-08-06 12:55:15 | INFO     | app.main:search_similar_products:157 - Sonuç 1 işleniyor...
+2025-08-06 12:55:15 | INFO     | app.main:search_similar_products:162 - Sonuç 1 base64 uzunluğu: 634
+2025-08-06 12:55:15 | INFO     | app.main:search_similar_products:157 - Sonuç 2 işleniyor...
+2025-08-06 12:55:15 | INFO     | app.main:search_similar_products:162 - Sonuç 2 base64 uzunluğu: 682
+2025-08-06 12:55:15 | INFO     | app.main:search_similar_products:157 - Sonuç 3 işleniyor...
+2025-08-06 12:55:15 | INFO     | app.main:search_similar_products:162 - Sonuç 3 base64 uzunluğu: 642
+2025-08-06 12:55:15 | INFO     | app.main:search_similar_products:157 - Sonuç 4 işleniyor...
+2025-08-06 12:55:15 | INFO     | app.main:search_similar_products:162 - Sonuç 4 base64 uzunluğu: 730
+2025-08-06 12:55:15 | INFO     | app.main:search_similar_products:157 - Sonuç 5 işleniyor...
+2025-08-06 12:55:15 | INFO     | app.main:search_similar_products:162 - Sonuç 5 base64 uzunluğu: 618
+2025-08-06 12:55:15 | INFO     | app.main:search_similar_products:167 - Arama tamamlandı: 5 sonuç, 0.0788s
+2025-08-06 12:55:26 | INFO     | app.main:health_check:93 - Sağlık kontrolü yapıldı
+2025-08-06 12:55:34 | INFO     | app.main:test_results:191 - Test sonuç sayfası istendi
+2025-08-06 12:55:34 | INFO     | app.main:test_results:200 - Test resmi base64 uzunluğu: 130
+2025-08-06 12:55:34 | INFO     | app.models:search_similar:320 - Benzer ürünler aranıyor...
+2025-08-06 12:55:34 | INFO     | app.models:search_similar:347 - 5 benzer ürün bulundu
+2025-08-06 12:55:34 | INFO     | app.main:test_results:207 - Test sonucu 1 işleniyor...
+2025-08-06 12:55:34 | INFO     | app.main:test_results:210 - Test sonucu 1 base64 uzunluğu: 322
+2025-08-06 12:55:34 | INFO     | app.main:test_results:207 - Test sonucu 2 işleniyor...
+2025-08-06 12:55:34 | INFO     | app.main:test_results:210 - Test sonucu 2 base64 uzunluğu: 370
+2025-08-06 12:55:34 | INFO     | app.main:test_results:207 - Test sonucu 3 işleniyor...
+2025-08-06 12:55:34 | INFO     | app.main:test_results:210 - Test sonucu 3 base64 uzunluğu: 470
+2025-08-06 12:55:34 | INFO     | app.main:test_results:207 - Test sonucu 4 işleniyor...
+2025-08-06 12:55:34 | INFO     | app.main:test_results:210 - Test sonucu 4 base64 uzunluğu: 334
+2025-08-06 12:55:34 | INFO     | app.main:test_results:207 - Test sonucu 5 işleniyor...
+2025-08-06 12:55:34 | INFO     | app.main:test_results:210 - Test sonucu 5 base64 uzunluğu: 342
+2025-08-06 12:56:11 | INFO     | app.main:home:62 - Ana sayfa istendi
+2025-08-06 12:56:11 | INFO     | app.main:health_check:93 - Sağlık kontrolü yapıldı
+2025-08-06 14:15:20 | INFO     | app.utils:setup_logger:60 - Logger configured for Fashion Search API v1.0.0
+2025-08-06 14:15:22 | INFO     | __main__:<module>:26 - FastAPI uygulaması başlatıldı: Fashion Search API v1.0.0
+2025-08-06 14:15:22 | INFO     | __main__:<module>:234 - Uygulama başlatılıyor: http://0.0.0.0:8000
+2025-08-06 14:15:22 | INFO     | __main__:<module>:235 - Swagger UI: http://0.0.0.0:8000/docs
+2025-08-06 14:15:22 | INFO     | app.main:<module>:26 - FastAPI uygulaması başlatıldı: Fashion Search API v1.0.0
+2025-08-06 14:15:26 | INFO     | app.main:home:62 - Ana sayfa istendi
+2025-08-06 14:15:28 | INFO     | app.models:initialize:222 - Arama motoru başlatılıyor...
+2025-08-06 14:15:28 | INFO     | app.models:load_model:53 - OpenCLIP modeli yükleniyor: ViT-B-32
+2025-08-06 14:15:30 | INFO     | app.models:load_model:65 - Model yüklendi. Cihaz: cuda
+2025-08-06 14:15:30 | INFO     | app.models:download_dataset:25 - Fashion-MNIST indiriliyor: ./data/fashion
+2025-08-06 14:15:30 | INFO     | app.models:download_dataset:34 - Veri seti indirildi: 60000 örnek
+2025-08-06 14:15:30 | INFO     | app.models:load_embeddings:200 - Embedding'ler yüklendi: ./data/embeddings/embeddings.npy
+2025-08-06 14:15:30 | INFO     | app.models:load_embeddings:201 - Embedding şekli: (60000, 512)
+2025-08-06 14:15:30 | INFO     | app.models:load_index:153 - İndeks yüklendi: ./data/embeddings/faiss.index
+2025-08-06 14:15:30 | INFO     | app.models:load_index:154 - Toplam vektör: 60000
+2025-08-06 14:15:30 | INFO     | app.models:initialize:252 - Arama motoru başarıyla başlatıldı!
+2025-08-06 14:15:30 | INFO     | app.main:health_check:93 - Sağlık kontrolü yapıldı
+2025-08-06 14:15:40 | INFO     | app.main:search_similar_products:122 - Arama isteği alındı: outdoor-t-shirt-basic-pamuklu-erkek-uzun-kollu-tisort-terletmez-sifir-yaka-baseti05-tshirt-vav-wear-5510-15-B.jpg
+2025-08-06 14:15:40 | INFO     | app.main:search_similar_products:140 - Orijinal resim base64 uzunluğu: 258758
+2025-08-06 14:15:40 | INFO     | app.models:search_similar:320 - Benzer ürünler aranıyor...
+2025-08-06 14:15:40 | INFO     | app.models:search_similar:347 - 5 benzer ürün bulundu
+2025-08-06 14:15:40 | INFO     | app.main:search_similar_products:157 - Sonuç 1 işleniyor...
+2025-08-06 14:15:40 | INFO     | app.main:search_similar_products:162 - Sonuç 1 base64 uzunluğu: 634
+2025-08-06 14:15:40 | INFO     | app.main:search_similar_products:157 - Sonuç 2 işleniyor...
+2025-08-06 14:15:40 | INFO     | app.main:search_similar_products:162 - Sonuç 2 base64 uzunluğu: 682
+2025-08-06 14:15:40 | INFO     | app.main:search_similar_products:157 - Sonuç 3 işleniyor...
+2025-08-06 14:15:40 | INFO     | app.main:search_similar_products:162 - Sonuç 3 base64 uzunluğu: 642
+2025-08-06 14:15:40 | INFO     | app.main:search_similar_products:157 - Sonuç 4 işleniyor...
+2025-08-06 14:15:40 | INFO     | app.main:search_similar_products:162 - Sonuç 4 base64 uzunluğu: 730
+2025-08-06 14:15:40 | INFO     | app.main:search_similar_products:157 - Sonuç 5 işleniyor...
+2025-08-06 14:15:40 | INFO     | app.main:search_similar_products:162 - Sonuç 5 base64 uzunluğu: 618
+2025-08-06 14:15:40 | INFO     | app.main:search_similar_products:167 - Arama tamamlandı: 5 sonuç, 0.2008s
+2025-08-06 14:34:03 | INFO     | app.utils:setup_logger:60 - Logger configured for Fashion Search API v1.0.0
+2025-08-06 14:34:05 | INFO     | __main__:<module>:26 - FastAPI uygulaması başlatıldı: Fashion Search API v1.0.0
+2025-08-06 14:34:05 | INFO     | __main__:<module>:234 - Uygulama başlatılıyor: http://0.0.0.0:8000
+2025-08-06 14:34:05 | INFO     | __main__:<module>:235 - Swagger UI: http://0.0.0.0:8000/docs
+2025-08-06 14:34:05 | INFO     | app.main:<module>:26 - FastAPI uygulaması başlatıldı: Fashion Search API v1.0.0
+2025-08-07 13:56:53 | INFO     | app.utils:setup_logger:60 - Logger configured for Fashion Search API v1.0.0
+2025-08-07 13:56:56 | INFO     | __main__:<module>:26 - FastAPI uygulaması başlatıldı: Fashion Search API v1.0.0
+2025-08-07 13:56:57 | INFO     | __main__:<module>:234 - Uygulama başlatılıyor: http://0.0.0.0:8000
+2025-08-07 13:56:57 | INFO     | __main__:<module>:235 - Swagger UI: http://0.0.0.0:8000/docs
+2025-08-07 13:56:57 | INFO     | app.main:<module>:26 - FastAPI uygulaması başlatıldı: Fashion Search API v1.0.0
+2025-08-07 13:57:08 | INFO     | app.main:home:62 - Ana sayfa istendi
+2025-08-07 13:57:10 | INFO     | app.models:initialize:222 - Arama motoru başlatılıyor...
+2025-08-07 13:57:10 | INFO     | app.models:load_model:53 - OpenCLIP modeli yükleniyor: ViT-B-32
+2025-08-07 13:57:12 | INFO     | app.models:load_model:65 - Model yüklendi. Cihaz: cuda
+2025-08-07 13:57:12 | INFO     | app.models:download_dataset:25 - Fashion-MNIST indiriliyor: ./data/fashion
+2025-08-07 13:57:12 | INFO     | app.models:download_dataset:34 - Veri seti indirildi: 60000 örnek
+2025-08-07 13:57:12 | INFO     | app.models:load_embeddings:200 - Embedding'ler yüklendi: ./data/embeddings/embeddings.npy
+2025-08-07 13:57:12 | INFO     | app.models:load_embeddings:201 - Embedding şekli: (60000, 512)
+2025-08-07 13:57:12 | INFO     | app.models:load_index:153 - İndeks yüklendi: ./data/embeddings/faiss.index
+2025-08-07 13:57:12 | INFO     | app.models:load_index:154 - Toplam vektör: 60000
+2025-08-07 13:57:12 | INFO     | app.models:initialize:252 - Arama motoru başarıyla başlatıldı!
+2025-08-07 13:57:13 | INFO     | app.main:health_check:93 - Sağlık kontrolü yapıldı
+2025-08-07 13:57:33 | INFO     | app.main:search_similar_products:122 - Arama isteği alındı: outdoor-t-shirt-basic-pamuklu-erkek-uzun-kollu-tisort-terletmez-sifir-yaka-baseti05-tshirt-vav-wear-5510-15-B.jpg
+2025-08-07 13:57:33 | INFO     | app.main:search_similar_products:140 - Orijinal resim base64 uzunluğu: 258758
+2025-08-07 13:57:33 | INFO     | app.models:search_similar:320 - Benzer ürünler aranıyor...
+2025-08-07 13:57:33 | INFO     | app.models:search_similar:347 - 5 benzer ürün bulundu
+2025-08-07 13:57:33 | INFO     | app.main:search_similar_products:157 - Sonuç 1 işleniyor...
+2025-08-07 13:57:33 | INFO     | app.main:search_similar_products:162 - Sonuç 1 base64 uzunluğu: 634
+2025-08-07 13:57:33 | INFO     | app.main:search_similar_products:157 - Sonuç 2 işleniyor...
+2025-08-07 13:57:33 | INFO     | app.main:search_similar_products:162 - Sonuç 2 base64 uzunluğu: 682
+2025-08-07 13:57:33 | INFO     | app.main:search_similar_products:157 - Sonuç 3 işleniyor...
+2025-08-07 13:57:33 | INFO     | app.main:search_similar_products:162 - Sonuç 3 base64 uzunluğu: 642
+2025-08-07 13:57:33 | INFO     | app.main:search_similar_products:157 - Sonuç 4 işleniyor...
+2025-08-07 13:57:33 | INFO     | app.main:search_similar_products:162 - Sonuç 4 base64 uzunluğu: 730
+2025-08-07 13:57:33 | INFO     | app.main:search_similar_products:157 - Sonuç 5 işleniyor...
+2025-08-07 13:57:33 | INFO     | app.main:search_similar_products:162 - Sonuç 5 base64 uzunluğu: 618
+2025-08-07 13:57:33 | INFO     | app.main:search_similar_products:167 - Arama tamamlandı: 5 sonuç, 0.3491s
+2025-08-07 13:59:18 | INFO     | app.main:home:62 - Ana sayfa istendi
+2025-08-07 13:59:18 | INFO     | app.main:health_check:93 - Sağlık kontrolü yapıldı
+2025-08-07 13:59:29 | INFO     | app.main:search_similar_products:122 - Arama isteği alındı: Huzursuzbacaksendromu.jpg
+2025-08-07 13:59:30 | INFO     | app.main:search_similar_products:140 - Orijinal resim base64 uzunluğu: 8419774
+2025-08-07 13:59:30 | INFO     | app.models:search_similar:320 - Benzer ürünler aranıyor...
+2025-08-07 13:59:30 | INFO     | app.models:search_similar:347 - 5 benzer ürün bulundu
+2025-08-07 13:59:30 | INFO     | app.main:search_similar_products:157 - Sonuç 1 işleniyor...
+2025-08-07 13:59:30 | INFO     | app.main:search_similar_products:162 - Sonuç 1 base64 uzunluğu: 510
+2025-08-07 13:59:30 | INFO     | app.main:search_similar_products:157 - Sonuç 2 işleniyor...
+2025-08-07 13:59:30 | INFO     | app.main:search_similar_products:162 - Sonuç 2 base64 uzunluğu: 782
+2025-08-07 13:59:30 | INFO     | app.main:search_similar_products:157 - Sonuç 3 işleniyor...
+2025-08-07 13:59:30 | INFO     | app.main:search_similar_products:162 - Sonuç 3 base64 uzunluğu: 698
+2025-08-07 13:59:30 | INFO     | app.main:search_similar_products:157 - Sonuç 4 işleniyor...
+2025-08-07 13:59:30 | INFO     | app.main:search_similar_products:162 - Sonuç 4 base64 uzunluğu: 662
+2025-08-07 13:59:30 | INFO     | app.main:search_similar_products:157 - Sonuç 5 işleniyor...
+2025-08-07 13:59:30 | INFO     | app.main:search_similar_products:162 - Sonuç 5 base64 uzunluğu: 574
+2025-08-07 13:59:30 | INFO     | app.main:search_similar_products:167 - Arama tamamlandı: 5 sonuç, 1.6043s

@@ -1,0 +1,309 @@
+{% extends "base.html" %}
+
+{% block title %}Fashion Search - Home{% endblock %}
+
+{% block head %}
+<meta name="description" content="AI-powered fashion product search. Upload an image and find similar products instantly.">
+{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="relative bg-gradient-to-br from-primary-50 via-white to-secondary-50 py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center animate-fade-in">
+            <div class="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-primary-500 to-secondary-500 rounded-full mb-6">
+                <i class="fas fa-search text-white text-2xl"></i>
+            </div>
+            <h1 class="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+                <span class="bg-gradient-to-r from-primary-600 to-secondary-600 bg-clip-text text-transparent">
+                    AI Fashion Search
+                </span>
+            </h1>
+            <p class="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+                Upload a fashion item image and discover visually similar products instantly. Powered by advanced AI and machine learning technology.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <a href="#upload" class="bg-primary-600 text-white px-8 py-3 rounded-lg font-medium hover:bg-primary-700 transition-all duration-200 transform hover:scale-105 shadow-lg">
+                    <i class="fas fa-upload mr-2"></i>
+                    Start Searching
+                </a>
+                <a href="/test-results" class="bg-white text-primary-600 px-8 py-3 rounded-lg font-medium border-2 border-primary-600 hover:bg-primary-50 transition-all duration-200">
+                    <i class="fas fa-flask mr-2"></i>
+                    View Demo
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Decorative elements -->
+    <div class="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
+        <div class="absolute -top-40 -left-40 w-80 h-80 bg-primary-200 rounded-full mix-blend-multiply filter blur-xl opacity-30"></div>
+        <div class="absolute -bottom-40 -right-40 w-80 h-80 bg-secondary-200 rounded-full mix-blend-multiply filter blur-xl opacity-30"></div>
+    </div>
+</section>
+
+<!-- Features Section -->
+<section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Why Choose Fashion Search?
+            </h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                Our AI-powered platform delivers accurate and fast results for fashion discovery.
+            </p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Feature 1 -->
+            <div class="text-center group">
+                <div class="inline-flex items-center justify-center w-16 h-16 bg-primary-100 rounded-full mb-4 group-hover:bg-primary-200 transition-colors duration-200">
+                    <i class="fas fa-brain text-primary-600 text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-900 mb-2">Advanced AI</h3>
+                <p class="text-gray-600">
+                    Powered by state-of-the-art machine learning models for accurate visual recognition.
+                </p>
+            </div>
+            
+            <!-- Feature 2 -->
+            <div class="text-center group">
+                <div class="inline-flex items-center justify-center w-16 h-16 bg-secondary-100 rounded-full mb-4 group-hover:bg-secondary-200 transition-colors duration-200">
+                    <i class="fas fa-bolt text-secondary-600 text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-900 mb-2">Lightning Fast</h3>
+                <p class="text-gray-600">
+                    Get results in seconds with our optimized search algorithm and powerful indexing.
+                </p>
+            </div>
+            
+            <!-- Feature 3 -->
+            <div class="text-center group">
+                <div class="inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-4 group-hover:bg-green-200 transition-colors duration-200">
+                    <i class="fas fa-check-circle text-green-600 text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-900 mb-2">High Accuracy</h3>
+                <p class="text-gray-600">
+                    Trained on thousands of fashion items to ensure precise and relevant results.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Upload Section -->
+<section id="upload" class="py-20 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Find Similar Products
+            </h2>
+            <p class="text-xl text-gray-600">
+                Upload an image and let our AI find similar fashion items for you.
+            </p>
+        </div>
+        
+        <!-- Upload Form -->
+        <div class="bg-white rounded-2xl shadow-xl p-8 animate-slide-up">
+            <form id="uploadForm" enctype="multipart/form-data" class="space-y-6">
+                <!-- File Upload Area -->
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-2">
+                        Upload Fashion Image
+                    </label>
+                    <div class="mt-1 flex justify-center px-6 pt-5 pb-6 border-2 border-gray-300 border-dashed rounded-xl hover:border-primary-400 transition-colors duration-200 bg-gray-50 hover:bg-primary-50">
+                        <div class="space-y-1 text-center">
+                            <div class="flex justify-center">
+                                <i class="fas fa-cloud-upload-alt text-4xl text-gray-400"></i>
+                            </div>
+                            <div class="flex text-sm text-gray-600">
+                                <label for="file-upload" class="relative cursor-pointer bg-white rounded-md font-medium text-primary-600 hover:text-primary-500 focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-primary-500">
+                                    <span>Upload a file</span>
+                                    <input id="file-upload" name="file" type="file" class="sr-only" accept="image/*" required>
+                                </label>
+                                <p class="pl-1">or drag and drop</p>
+                            </div>
+                            <p class="text-xs text-gray-500">
+                                PNG, JPG, GIF up to 10MB
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Status Display -->
+                <div id="statusDisplay" class="hidden">
+                    <div class="bg-blue-50 border border-blue-200 rounded-lg p-4">
+                        <div class="flex">
+                            <div class="flex-shrink-0">
+                                <i class="fas fa-info-circle text-blue-400"></i>
+                            </div>
+                            <div class="ml-3">
+                                <p class="text-sm text-blue-700">
+                                    <span id="statusText">System Status: Ready</span>
+                                </p>
+                                <p class="text-xs text-blue-600 mt-1">
+                                    <span id="itemCount">0</span> items in database
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="flex justify-center">
+                    <button type="submit" class="group relative px-8 py-3 bg-gradient-to-r from-primary-600 to-secondary-600 text-white font-medium rounded-lg hover:from-primary-700 hover:to-secondary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 transition-all duration-200 transform hover:scale-105 shadow-lg">
+                        <span class="flex items-center">
+                            <i class="fas fa-search mr-2"></i>
+                            Find Similar Products
+                        </span>
+                        <div class="absolute inset-0 rounded-lg bg-white opacity-0 group-hover:opacity-10 transition-opacity duration-200"></div>
+                    </button>
+                </div>
+            </form>
+
+            <!-- Loading State -->
+            <div id="loading" class="hidden text-center py-8">
+                <div class="inline-flex items-center justify-center w-16 h-16 bg-primary-100 rounded-full mb-4">
+                    <div class="animate-spin rounded-full h-8 w-8 border-b-2 border-primary-600"></div>
+                </div>
+                <p class="text-gray-600">Analyzing your image...</p>
+                <p class="text-sm text-gray-500 mt-1">This may take a few seconds</p>
+            </div>
+
+            <!-- Error Message -->
+            <div id="errorMessage" class="hidden mt-4">
+                <div class="bg-red-50 border border-red-200 rounded-lg p-4">
+                    <div class="flex">
+                        <div class="flex-shrink-0">
+                            <i class="fas fa-exclamation-circle text-red-400"></i>
+                        </div>
+                        <div class="ml-3">
+                            <h3 class="text-sm font-medium text-red-800">
+                                Upload Error
+                            </h3>
+                            <div class="mt-2 text-sm text-red-700">
+                                <p id="errorText"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- How It Works -->
+<section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                How It Works
+            </h2>
+            <p class="text-xl text-gray-600">
+                Our AI-powered search process is simple and efficient.
+            </p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <!-- Step 1 -->
+            <div class="text-center">
+                <div class="relative">
+                    <div class="flex items-center justify-center w-16 h-16 bg-primary-600 text-white rounded-full text-xl font-bold mx-auto mb-4">
+                        1
+                    </div>
+                    <div class="hidden md:block absolute top-8 left-full w-full h-0.5 bg-gray-300"></div>
+                </div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-2">Upload Image</h3>
+                <p class="text-gray-600">
+                    Upload a clear image of the fashion item you want to search for.
+                </p>
+            </div>
+            
+            <!-- Step 2 -->
+            <div class="text-center">
+                <div class="relative">
+                    <div class="flex items-center justify-center w-16 h-16 bg-primary-600 text-white rounded-full text-xl font-bold mx-auto mb-4">
+                        2
+                    </div>
+                    <div class="hidden md:block absolute top-8 left-full w-full h-0.5 bg-gray-300"></div>
+                </div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-2">AI Analysis</h3>
+                <p class="text-gray-600">
+                    Our AI analyzes the visual features and patterns in your image.
+                </p>
+            </div>
+            
+            <!-- Step 3 -->
+            <div class="text-center">
+                <div class="relative">
+                    <div class="flex items-center justify-center w-16 h-16 bg-primary-600 text-white rounded-full text-xl font-bold mx-auto mb-4">
+                        3
+                    </div>
+                    <div class="hidden md:block absolute top-8 left-full w-full h-0.5 bg-gray-300"></div>
+                </div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-2">Search Database</h3>
+                <p class="text-gray-600">
+                    We search through thousands of fashion items to find matches.
+                </p>
+            </div>
+            
+            <!-- Step 4 -->
+            <div class="text-center">
+                <div class="flex items-center justify-center w-16 h-16 bg-primary-600 text-white rounded-full text-xl font-bold mx-auto mb-4">
+                    4
+                </div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-2">View Results</h3>
+                <p class="text-gray-600">
+                    Get instant results with similar products and similarity scores.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-20 bg-gradient-to-r from-primary-600 to-secondary-600">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">
+            Ready to Discover Similar Fashion Items?
+        </h2>
+        <p class="text-xl text-primary-100 mb-8">
+            Join thousands of users who are already using our AI-powered fashion search.
+        </p>
+        <a href="#upload" class="inline-flex items-center px-8 py-3 bg-white text-primary-600 font-medium rounded-lg hover:bg-gray-100 transition-all duration-200 transform hover:scale-105 shadow-lg">
+            <i class="fas fa-search mr-2"></i>
+            Start Searching Now
+        </a>
+    </div>
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', path='/js/main.js') }}"></script>
+<script>
+    // Status display
+    document.addEventListener('DOMContentLoaded', function() {
+        const statusDisplay = document.getElementById('statusDisplay');
+        const statusText = document.getElementById('statusText');
+        const itemCount = document.getElementById('itemCount');
+        
+        statusDisplay.classList.remove('hidden');
+        
+        // Fetch system status
+        fetch('/api/health')
+            .then(response => {
+                if (!response.ok) { throw new Error('Network response was not ok'); }
+                return response.json();
+            })
+            .then(data => {
+                statusText.textContent = `System Status: ${data.status || 'unknown'}`;
+                itemCount.textContent = `${data.total_items || 0} items in database`;
+            })
+            .catch(error => {
+                console.error('Error fetching health status:', error);
+                statusText.textContent = 'System Status: Offline';
+                itemCount.textContent = '0 items in database';
+            });
+    });
+</script>
+{% endblock %}
