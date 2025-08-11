@@ -1,0 +1,13 @@
+fastapi
+uvicorn[standard]
+loguru
+torch==2.6.0+cu124
+torchvision==0.21.0+cu124
+--extra-index-url https://download.pytorch.org/whl/cu124
+open-clip-torch
+faiss-cpu
+Jinja2
+numpy
+pillow
+tqdm
+python-dotenv

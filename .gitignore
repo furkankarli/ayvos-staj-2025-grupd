@@ -1,2 +1,7 @@
 dataset*
 *.pt
+*.npy
+*.index
+*.pth
+*.pkl
+03-TeamProjects/fashion_search/data/fashion

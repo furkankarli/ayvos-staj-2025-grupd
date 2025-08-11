@@ -1,0 +1,222 @@
+{% extends "base.html" %}
+
+{% block title %}Search Results - Fashion Search{% endblock %}
+
+{% block head %}
+<meta name="description" content="View similar fashion items found by our AI-powered search engine.">
+{% endblock %}
+
+{% block content %}
+<!-- Results Header -->
+<section class="bg-gradient-to-br from-primary-50 to-secondary-50 py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between">
+            <div>
+                <a href="/" class="inline-flex items-center text-primary-600 hover:text-primary-700 transition-colors duration-200">
+                    <i class="fas fa-arrow-left mr-2"></i>
+                    New Search
+                </a>
+                <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mt-2">
+                    Search Results
+                </h1>
+                <p class="text-gray-600 mt-1">
+                    The top {{ results|length }} similar products are listed below.
+                </p>
+            </div>
+            <div class="hidden md:block">
+                <div class="bg-white rounded-lg shadow-sm p-4 border border-gray-200">
+                    <div class="flex items-center space-x-2">
+                        <i class="fas fa-clock text-primary-600"></i>
+                        <span class="text-sm text-gray-600">
+                            Search Time: <strong>{{ search_time|round(4) }}s</strong>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Results Content -->
+<section class="py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Mobile Search Info -->
+        <div class="md:hidden mb-6">
+            <div class="bg-blue-50 border border-blue-200 rounded-lg p-4">
+                <div class="flex items-center">
+                    <i class="fas fa-info-circle text-blue-400 mr-2"></i>
+                    <span class="text-sm text-blue-700">
+                        Found {{ results|length }} similar products in {{ search_time|round(4) }}s.
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Results Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <!-- Original Image -->
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+                <div class="bg-gradient-to-r from-primary-600 to-secondary-600 px-6 py-4">
+                    <h2 class="text-xl font-semibold text-white flex items-center">
+                        <i class="fas fa-image mr-2"></i>
+                        Original Product
+                    </h2>
+                </div>
+                <div class="p-6">
+                    <div class="flex justify-center">
+                        <div class="relative group">
+                            <img id="originalImage" src="{{ original_image_base64 }}" alt="Original Product" 
+                                 class="w-72 h-72 object-contain rounded-lg shadow-md group-hover:shadow-xl transition-shadow duration-300"
+                                 onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjg4IiBoZWlnaHQ9IjI4OCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZGRkIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzk5OSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkltYWdlIE5vdCBMb2FkZWQ8L3RleHQ+PC9zdmc+'">
+                            <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 rounded-lg transition-all duration-300"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Similar Products -->
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+                <div class="bg-gradient-to-r from-secondary-600 to-primary-600 px-6 py-4">
+                    <h2 class="text-xl font-semibold text-white flex items-center">
+                        <i class="fas fa-search-plus mr-2"></i>
+                        Similar Products
+                    </h2>
+                </div>
+                <div class="p-6">
+                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+                        {% for result in results %}
+                        <div class="group">
+                            <div class="bg-gray-50 rounded-xl p-4 hover:bg-gray-100 transition-all duration-200 hover:shadow-md">
+                                <div class="flex justify-center mb-3">
+                                    <div class="relative">
+                                        <img src="{{ result.image_base64 }}" alt="Similar Product {{ loop.index }}" 
+                                             class="w-32 h-32 object-contain rounded-lg shadow-sm group-hover:shadow-md transition-shadow duration-300"
+                                             onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQwIiBoZWlnaHQ9IjE0MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZGRkIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxMiIgZmlsbD0iIzk5OSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPk5vIEltYWdlPC90ZXh0Pjwvc3ZnPg=='">
+                                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 rounded-lg transition-all duration-300"></div>
+                                    </div>
+                                </div>
+                                <div class="text-center">
+                                    <div class="inline-flex items-center px-3 py-1 bg-primary-100 text-primary-800 text-xs font-medium rounded-full">
+                                        <i class="fas fa-tag mr-1"></i>
+                                        Label: {{ result.label }}
+                                    </div>
+                                    <div class="mt-2">
+                                        <div class="flex items-center justify-center text-sm text-gray-600">
+                                            <i class="fas fa-percentage mr-1"></i>
+                                            <span>Similarity: {{ "%.4f"|format(result.distance) }}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Search Details -->
+        <div class="mt-8">
+            <div class="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl p-6 border border-blue-200">
+                <div class="flex items-start">
+                    <div class="flex-shrink-0">
+                        <div class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
+                            <i class="fas fa-info text-blue-600"></i>
+                        </div>
+                    </div>
+                    <div class="ml-4">
+                        <h3 class="text-lg font-medium text-blue-900">
+                            Search Details
+                        </h3>
+                        <div class="mt-2 text-sm text-blue-700 space-y-1">
+                            <p><strong>Total Search Time:</strong> {{ search_time|round(4) }} seconds</p>
+                            <p><strong>Products Found:</strong> {{ results|length }}</p>
+                            <p><strong>Technology Used:</strong> OpenCLIP + FAISS</p>
+                            <p><strong>Database:</strong> Fashion-MNIST (60,000+ items)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/" class="inline-flex items-center justify-center px-6 py-3 bg-primary-600 text-white font-medium rounded-lg hover:bg-primary-700 transition-colors duration-200">
+                <i class="fas fa-plus mr-2"></i>
+                Perform New Search
+            </a>
+            <button onclick="shareResults()" class="inline-flex items-center justify-center px-6 py-3 bg-white text-primary-600 font-medium rounded-lg border-2 border-primary-600 hover:bg-primary-50 transition-colors duration-200">
+                <i class="fas fa-share-alt mr-2"></i>
+                Share Results
+            </button>
+            <button onclick="downloadResults()" class="inline-flex items-center justify-center px-6 py-3 bg-white text-gray-600 font-medium rounded-lg border-2 border-gray-300 hover:bg-gray-50 transition-colors duration-200">
+                <i class="fas fa-download mr-2"></i>
+                Download Results
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- Related Searches -->
+<section class="py-12 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-2xl font-bold text-gray-900 mb-8 text-center">
+            Related Searches
+        </h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <button class="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200 text-center">
+                <i class="fas fa-tshirt text-2xl text-primary-600 mb-2"></i>
+                <p class="text-sm font-medium text-gray-900">T-Shirts</p>
+            </button>
+            <button class="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200 text-center">
+                <i class="fas fa-shoe-prints text-2xl text-secondary-600 mb-2"></i>
+                <p class="text-sm font-medium text-gray-900">Shoes</p>
+            </button>
+            <button class="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200 text-center">
+                <i class="fas fa-hat-cowboy text-2xl text-green-600 mb-2"></i>
+                <p class="text-sm font-medium text-gray-900">Hats</p>
+            </button>
+            <button class="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200 text-center">
+                <i class="fas fa-glasses text-2xl text-purple-600 mb-2"></i>
+                <p class="text-sm font-medium text-gray-900">Glasses</p>
+            </button>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script>
+function shareResults() {
+    if (navigator.share) {
+        navigator.share({
+            title: 'Fashion Search Results',
+            text: 'Check out these similar fashion items I found!',
+            url: window.location.href
+        });
+    } else {
+        alert('Share feature is not supported in your browser.');
+    }
+}
+
+function downloadResults() {
+    // This function can be developed further later
+    alert('Download feature will be added soon!');
+}
+
+// Trigger animations on page load
+document.addEventListener('DOMContentLoaded', function() {
+    const elements = document.querySelectorAll('.animate-slide-up');
+    elements.forEach(el => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(20px)';
+        
+        setTimeout(() => {
+            el.style.transition = 'all 0.6s ease-out';
+            el.style.opacity = '1';
+            el.style.transform = 'translateY(0)';
+        }, 100);
+    });
+});
+</script>
+{% endblock %}
