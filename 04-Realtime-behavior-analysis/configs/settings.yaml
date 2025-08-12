@@ -1,0 +1,43 @@
+# Project settings for realtime behavior analysis
+# Forbidden zones, danger thresholds, and other configurations
+
+detection:
+  confidence_threshold: 0.5
+  nms_threshold: 0.4
+  max_disappeared_frames: 30
+
+pose_estimation:
+  confidence_threshold: 0.3
+  keypoint_threshold: 0.2
+
+behavior_analysis:
+  danger_zones:
+    - name: "restricted_area_1"
+      coordinates: [[100, 100], [200, 100], [200, 200], [100, 200]]
+      danger_threshold_seconds: 5.0
+    - name: "restricted_area_2" 
+      coordinates: [[300, 150], [400, 150], [400, 250], [300, 250]]
+      danger_threshold_seconds: 3.0
+  
+  pose_classifications:
+    dangerous_poses:
+      - "falling"
+      - "lying_down"
+      - "aggressive_stance"
+    
+  logging:
+    interval_seconds: 1.0
+    format: "csv"  # csv or json
+    include_timestamps: true
+
+video:
+  input_resolution: [640, 480]
+  output_resolution: [640, 480]
+  fps: 30
+  codec: "mp4v"
+
+visualization:
+  show_bounding_boxes: true
+  show_pose_keypoints: true
+  show_danger_zones: true
+  overlay_transparency: 0.3
