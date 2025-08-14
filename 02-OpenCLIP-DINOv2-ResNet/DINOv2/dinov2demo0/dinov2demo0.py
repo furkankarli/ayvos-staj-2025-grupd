@@ -8,20 +8,23 @@ Original file is located at
 """
 
 from google.colab import drive
-drive.mount('/content/drive')
+
+drive.mount("/content/drive")
+
+import copy
 
 # Gerekli kütüphaneler
 import os
-import copy
+
+import matplotlib.pyplot as plt
+import numpy as np
 import torch
 import torch.nn as nn
 import torch.optim as optim
-from torchvision import datasets, transforms
-from torch.utils.data import DataLoader, random_split
-from timm import create_model
 from sklearn.metrics import accuracy_score, confusion_matrix
-import matplotlib.pyplot as plt
-import numpy as np
+from timm import create_model
+from torch.utils.data import DataLoader, random_split
+from torchvision import datasets, transforms
 
 # Hiperparametreler (istediğin gibi değiştir)
 DATA_DIR = "/content/drive/MyDrive/Dinov2Demo/datasetv2"
@@ -29,32 +32,36 @@ BATCH_SIZE = 32
 NUM_WORKERS = 2
 NUM_CLASSES = 44  # Senin class sayını yaz
 IMAGE_SIZE = 224
-EPOCHS_HEAD = 20       # Sadece head eğitilecek
-EPOCHS_FULL = 20       # Tüm model eğitilecek
-PATIENCE = 4           # Early stopping
+EPOCHS_HEAD = 20  # Sadece head eğitilecek
+EPOCHS_FULL = 20  # Tüm model eğitilecek
+PATIENCE = 4  # Early stopping
 LEARNING_RATE_HEAD = 1e-3
 LEARNING_RATE_FULL = 1e-4
-DEVICE = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 # Eğitim sırasında kullanılacak augmentations
-train_transforms = transforms.Compose([
-    transforms.Resize((IMAGE_SIZE, IMAGE_SIZE)),
-    transforms.RandomHorizontalFlip(),
-    transforms.RandomRotation(20),
-    transforms.ColorJitter(brightness=0.2, contrast=0.2, saturation=0.2, hue=0.1),
-    transforms.RandomResizedCrop(IMAGE_SIZE, scale=(0.7, 1.0)),
-    transforms.RandomGrayscale(p=0.1),
-    transforms.ToTensor(),
-    transforms.RandomErasing(p=0.1, scale=(0.02, 0.19), ratio=(0.3, 3.3)),
-    transforms.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225])
-])
+train_transforms = transforms.Compose(
+    [
+        transforms.Resize((IMAGE_SIZE, IMAGE_SIZE)),
+        transforms.RandomHorizontalFlip(),
+        transforms.RandomRotation(20),
+        transforms.ColorJitter(brightness=0.2, contrast=0.2, saturation=0.2, hue=0.1),
+        transforms.RandomResizedCrop(IMAGE_SIZE, scale=(0.7, 1.0)),
+        transforms.RandomGrayscale(p=0.1),
+        transforms.ToTensor(),
+        transforms.RandomErasing(p=0.1, scale=(0.02, 0.19), ratio=(0.3, 3.3)),
+        transforms.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225]),
+    ]
+)
 
 # Validation ve test için augmentations'sız (sadece resize ve normalize)
-test_transforms = transforms.Compose([
-    transforms.Resize((IMAGE_SIZE, IMAGE_SIZE)),
-    transforms.ToTensor(),
-    transforms.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225])
-])
+test_transforms = transforms.Compose(
+    [
+        transforms.Resize((IMAGE_SIZE, IMAGE_SIZE)),
+        transforms.ToTensor(),
+        transforms.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225]),
+    ]
+)
 
 # ImageFolder üzerinden dataset oluştur
 dataset = datasets.ImageFolder(DATA_DIR, transform=train_transforms)
@@ -64,34 +71,49 @@ test_len = int(0.15 * data_len)
 train_len = data_len - val_len - test_len
 
 # Train/val/test split
-train_set, val_set, test_set = random_split(dataset, [train_len,val_len,test_len],
-                                            generator=torch.Generator().manual_seed(42))
+train_set, val_set, test_set = random_split(
+    dataset, [train_len, val_len, test_len], generator=torch.Generator().manual_seed(42)
+)
 
 # Val ve test için transform değiştirme
 val_set.dataset.transform = test_transforms
 test_set.dataset.transform = test_transforms
 
 # DataLoader
-train_loader = DataLoader(train_set, batch_size=BATCH_SIZE, shuffle=True, num_workers=NUM_WORKERS)
-val_loader = DataLoader(val_set, batch_size=BATCH_SIZE, shuffle=False, num_workers=NUM_WORKERS)
-test_loader = DataLoader(test_set, batch_size=BATCH_SIZE, shuffle=False, num_workers=NUM_WORKERS)
+train_loader = DataLoader(
+    train_set, batch_size=BATCH_SIZE, shuffle=True, num_workers=NUM_WORKERS
+)
+val_loader = DataLoader(
+    val_set, batch_size=BATCH_SIZE, shuffle=False, num_workers=NUM_WORKERS
+)
+test_loader = DataLoader(
+    test_set, batch_size=BATCH_SIZE, shuffle=False, num_workers=NUM_WORKERS
+)
 
 from transformers import AutoImageProcessor, AutoModelForImageClassification
 
 model_ckpt = "facebook/dinov2-base"
 processor = AutoImageProcessor.from_pretrained(model_ckpt)
 
-import torch.nn as nn
 import torch
+import torch.nn as nn
 
 model = AutoModelForImageClassification.from_pretrained(
-    model_ckpt,
-    num_labels=44,      # Sınıf sayısı
-    ignore_mismatched_sizes=True
+    model_ckpt, num_labels=44, ignore_mismatched_sizes=True  # Sınıf sayısı
 )
 model = model.to(DEVICE)
 
-def train_model(model, train_loader, val_loader, criterion, optimizer, scheduler, num_epochs, unfreeze_backbone_at=None):
+
+def train_model(
+    model,
+    train_loader,
+    val_loader,
+    criterion,
+    optimizer,
+    scheduler,
+    num_epochs,
+    unfreeze_backbone_at=None,
+):
     best_weights = copy.deepcopy(model.state_dict())
     best_acc = 0
     patience_counter = 0
@@ -101,7 +123,9 @@ def train_model(model, train_loader, val_loader, criterion, optimizer, scheduler
 
         # Backbone'u açmak için
         if unfreeze_backbone_at and epoch == unfreeze_backbone_at:
-            print("Backbone açılıyor (fine-tuning için tamamı öğrenilebilir hale getiriliyor).")
+            print(
+                "Backbone açılıyor (fine-tuning için tamamı öğrenilebilir hale getiriliyor)."
+            )
             for param in model.parameters():
                 param.requires_grad = True
             optimizer = optim.Adam(model.parameters(), lr=LEARNING_RATE_FULL)
@@ -130,7 +154,7 @@ def train_model(model, train_loader, val_loader, criterion, optimizer, scheduler
             for imgs, labels in val_loader:
                 imgs, labels = imgs.to(DEVICE), labels.to(DEVICE)
                 outputs = model(imgs)
-                 # Access the logits attribute from the model output
+                # Access the logits attribute from the model output
                 loss = criterion(outputs.logits, labels)
                 val_loss += loss.item() * imgs.size(0)
                 preds.extend(torch.argmax(outputs.logits, dim=1).cpu().numpy())
@@ -138,7 +162,9 @@ def train_model(model, train_loader, val_loader, criterion, optimizer, scheduler
         val_loss = val_loss / len(val_loader.dataset)
         val_acc = accuracy_score(targets, preds)
 
-        print(f"Train Loss: {train_loss:.3f} | Val Loss: {val_loss:.3f} | Val Acc: {val_acc:.4f}")
+        print(
+            f"Train Loss: {train_loss:.3f} | Val Loss: {val_loss:.3f} | Val Acc: {val_acc:.4f}"
+        )
 
         # Scheduler
         if scheduler:
@@ -158,27 +184,45 @@ def train_model(model, train_loader, val_loader, criterion, optimizer, scheduler
     model.load_state_dict(best_weights)
     return model
 
+
 # Sadece classification layer eğitimde olsun, backbone donsun
 for name, param in model.named_parameters():
-    if 'classifier' in name:
+    if "classifier" in name:
         param.requires_grad = True
     else:
         param.requires_grad = False
 
 criterion = nn.CrossEntropyLoss()
-optimizer = optim.Adam(filter(lambda p: p.requires_grad, model.parameters()), lr=LEARNING_RATE_HEAD)
-scheduler = optim.lr_scheduler.ReduceLROnPlateau(optimizer, mode='min', patience=2, factor=0.5, verbose=True)
+optimizer = optim.Adam(
+    filter(lambda p: p.requires_grad, model.parameters()), lr=LEARNING_RATE_HEAD
+)
+scheduler = optim.lr_scheduler.ReduceLROnPlateau(
+    optimizer, mode="min", patience=2, factor=0.5, verbose=True
+)
 
 print("Freezing backbone, training only the classifier...")
-model = train_model(model, train_loader, val_loader, criterion, optimizer, scheduler, EPOCHS_HEAD, unfreeze_backbone_at=None)
+model = train_model(
+    model,
+    train_loader,
+    val_loader,
+    criterion,
+    optimizer,
+    scheduler,
+    EPOCHS_HEAD,
+    unfreeze_backbone_at=None,
+)
 
 for param in model.parameters():
     param.requires_grad = True
 
 optimizer = optim.Adam(model.parameters(), lr=LEARNING_RATE_FULL)
-scheduler = optim.lr_scheduler.ReduceLROnPlateau(optimizer, mode='min', patience=2, factor=0.5, verbose=True)
+scheduler = optim.lr_scheduler.ReduceLROnPlateau(
+    optimizer, mode="min", patience=2, factor=0.5, verbose=True
+)
 
-model = train_model(model, train_loader, val_loader, criterion, optimizer, scheduler, EPOCHS_FULL)
+model = train_model(
+    model, train_loader, val_loader, criterion, optimizer, scheduler, EPOCHS_FULL
+)
 
 model.eval()
 all_preds = []
@@ -196,8 +240,8 @@ print(f"Test Accuracy: {test_acc*100:.2f}%")
 
 # ---- Confusion Matrix ----
 cm = confusion_matrix(all_labels, all_preds)
-plt.figure(figsize=(12,10))
-plt.imshow(cm, interpolation='nearest', cmap=plt.cm.Blues)
+plt.figure(figsize=(12, 10))
+plt.imshow(cm, interpolation="nearest", cmap=plt.cm.Blues)
 plt.title("Confusion Matrix")
 plt.colorbar()
 plt.xlabel("Predicted label")
@@ -207,13 +251,13 @@ plt.show()
 torch.save(model.state_dict(), "dinov2_finetuned.pt")
 print("Model kaydedildi.")
 
-import torch
-import torch.nn as nn
-from torchvision import datasets, transforms
-from torch.utils.data import DataLoader, random_split
-from sklearn.metrics import accuracy_score, confusion_matrix
 import matplotlib.pyplot as plt
 import numpy as np
+import torch
+import torch.nn as nn
+from sklearn.metrics import accuracy_score, confusion_matrix
+from torch.utils.data import DataLoader, random_split
+from torchvision import datasets, transforms
 
 # Parametreler
 DATA_DIR = "/content/drive/MyDrive/Dinov2Demo/datasetv2"
@@ -221,14 +265,16 @@ BATCH_SIZE = 32
 NUM_WORKERS = 2
 NUM_CLASSES = 44
 IMAGE_SIZE = 224
-DEVICE = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 # Sadece test için temel transform
-test_transforms = transforms.Compose([
-    transforms.Resize((IMAGE_SIZE, IMAGE_SIZE)),
-    transforms.ToTensor(),
-    transforms.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225])
-])
+test_transforms = transforms.Compose(
+    [
+        transforms.Resize((IMAGE_SIZE, IMAGE_SIZE)),
+        transforms.ToTensor(),
+        transforms.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225]),
+    ]
+)
 
 # Dataset ve test split (Burada aynı split ile kullandığından emin ol: random_split için seed kullan!)
 full_dataset = datasets.ImageFolder(DATA_DIR, transform=test_transforms)
@@ -237,10 +283,15 @@ val_len = int(0.15 * data_len)
 test_len = int(0.15 * data_len)
 train_len = data_len - val_len - test_len
 # Use the same seed as in cell 30zPUr9DLYBN for consistent split
-train_set, val_set, test_set = random_split(full_dataset, [train_len,val_len,test_len],
-                                            generator=torch.Generator().manual_seed(42))
+train_set, val_set, test_set = random_split(
+    full_dataset,
+    [train_len, val_len, test_len],
+    generator=torch.Generator().manual_seed(42),
+)
 
-test_loader = DataLoader(test_set, batch_size=BATCH_SIZE, shuffle=False, num_workers=NUM_WORKERS)
+test_loader = DataLoader(
+    test_set, batch_size=BATCH_SIZE, shuffle=False, num_workers=NUM_WORKERS
+)
 
 # Reuse the already loaded and fine-tuned model
 model.eval()
@@ -262,8 +313,8 @@ print(f"Test Accuracy: {test_acc*100:.2f}%")
 
 # Confusion Matrix
 cm = confusion_matrix(all_labels, all_preds)
-plt.figure(figsize=(12,10))
-plt.imshow(cm, interpolation='nearest', cmap=plt.cm.Blues)
+plt.figure(figsize=(12, 10))
+plt.imshow(cm, interpolation="nearest", cmap=plt.cm.Blues)
 plt.title("Confusion Matrix")
 plt.colorbar()
 plt.xlabel("Predicted label")
@@ -273,5 +324,6 @@ plt.show()
 # Kategorilerin isim listesini almak için:
 label_names = dataset.classes
 import json
-with open('label_names.json', 'w') as f:
+
+with open("label_names.json", "w") as f:
     json.dump(label_names, f)

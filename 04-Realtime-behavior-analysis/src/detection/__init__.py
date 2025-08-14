@@ -2,4 +2,4 @@
 from .detector import HumanDetector
 from .tracker import HumanTracker
 
-__all__ = ['HumanDetector', 'HumanTracker']
+__all__ = ["HumanDetector", "HumanTracker"]
