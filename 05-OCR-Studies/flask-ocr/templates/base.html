@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>OCR Uygulaması</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="/">OCR Uygulaması</a>
+      <div>
+        <a class="nav-link d-inline" href="/upload">Belge</a>
+        <a class="nav-link d-inline" href="/kimlik">Kimlik</a>
+        <a class="nav-link d-inline" href="/fis">Fiş</a>
+        <a class="nav-link d-inline" href="/convert">Dönüştür</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container mt-5">
+    {% block content %}{% endblock %}
+  </div>
+</body>
+</html>

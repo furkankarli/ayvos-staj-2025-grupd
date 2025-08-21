@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+<h2 class="text-center">📑 OCR ve Dönüştürme Uygulaması</h2>
+<p class="text-center">Lütfen yapmak istediğiniz işlemi seçin:</p>
+
+<div class="row text-center mt-4">
+  <div class="col-md-3">
+    <a href="/upload" class="btn btn-primary w-100">📄 Belge Yükle</a>
+  </div>
+  <div class="col-md-3">
+    <a href="/kimlik" class="btn btn-secondary w-100">🆔 Kimlik Yükle</a>
+  </div>
+  <div class="col-md-3">
+    <a href="/fis" class="btn btn-success w-100">🧾 Fiş Yükle</a>
+  </div>
+  <div class="col-md-3">
+    <a href="/convert" class="btn btn-warning w-100">🔄 Format Dönüştür</a>
+  </div>
+</div>
+{% endblock %}
