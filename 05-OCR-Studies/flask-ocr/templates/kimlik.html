@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>🆔 Kimlik Yükleme</h2>
+<form method="post" enctype="multipart/form-data">
+  <input type="file" name="file" class="form-control" required>
+  <button type="submit" class="btn btn-secondary mt-3">Yükle ve Oku</button>
+</form>
+
+{% if text %}
+<h3 class="mt-4">OCR Çıktısı:</h3>
+<textarea class="form-control" rows="15" readonly>{{ text }}</textarea>
+{% endif %}
+{% endblock %}

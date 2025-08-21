@@ -1,0 +1,25 @@
+body {
+  background-color: #f8f9fa;
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+textarea {
+  font-family: monospace;
+  white-space: pre-wrap; /* satırların kaybolmaması için */
+}
+
+.navbar-brand {
+  font-weight: bold;
+}
+
+.container {
+  max-width: 800px;
+}
+
+.btn {
+  border-radius: 10px;
+  padding: 12px;
+}
