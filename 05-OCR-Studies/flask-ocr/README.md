@@ -1,4 +1,3 @@
-Tabii 👍 Senin projen için detaylı bir **README.md** hazırladım. İngilizce, profesyonel ve GitHub’a direkt koyabileceğin formatta:
 
 ---
 
@@ -33,9 +32,7 @@ It also supports Turkish OCR with preprocessing and post-processing for better a
 ---
 
 ## 📂 Project Structure
-```
-
-flask-ocr-app/
+```flask-ocr-app/
 │
 ├── app.py                # Flask backend
 ├── templates/            # HTML templates
@@ -55,14 +52,14 @@ flask-ocr-app/
 ## ⚙️ Installation
 
 1. Clone the repository:
-   ```bash
+   ```
    git clone https://github.com/your-username/flask-ocr-app.git
    cd flask-ocr-app
 ````
 
 2. Create and activate a virtual environment:
 
-   ```bash
+   ```
    python3 -m venv venv
    source venv/bin/activate   # for Linux/Mac
    venv\Scripts\activate      # for Windows
@@ -70,7 +67,7 @@ flask-ocr-app/
 
 3. Install dependencies:
 
-   ```bash
+   ```
    pip install -r requirements.txt
    ```
 
@@ -78,19 +75,19 @@ flask-ocr-app/
 
    * macOS (brew):
 
-     ```bash
+     ```
      brew install tesseract
      ```
    * Ubuntu/Debian:
 
-     ```bash
+     ```
      sudo apt install tesseract-ocr
      ```
    * Windows: [Download here](https://github.com/tesseract-ocr/tesseract)
 
 5. Add Turkish language pack (if not already installed):
 
-   ```bash
+   ```
    brew install tesseract-lang  # macOS
    sudo apt install tesseract-ocr-tur  # Ubuntu/Debian
    ```
@@ -101,7 +98,7 @@ flask-ocr-app/
 
 1. Run the Flask app:
 
-   ```bash
+   ```
    python app.py
    ```
 
@@ -119,7 +116,7 @@ flask-ocr-app/
    * 🖼️ Convert Image → PDF
 
 ---
-
+``````
 ## 📸 Screenshots
 
 ![](ss.png)
