@@ -1,0 +1,121 @@
+﻿
+```markdown
+# Vehicle License Plate Recognition
+
+A complete Python project for vehicle detection and license plate recognition in both images and videos. The system uses YOLOv8 for vehicle and license plate detection and EasyOCR for reading license plate numbers.
+
+---
+
+## Features
+- Detect vehicles in images and videos.
+- Detect and read license plates using OCR.
+- Track vehicles across video frames using SORT.
+- Interpolate missing bounding boxes for smoother tracking.
+- Visualize results with annotated bounding boxes and license plate overlays.
+- Export results to CSV for further analysis.
+
+---
+
+## Model & Tools
+
+### YOLO Models
+- **Vehicle Detection:** `yolov8n.pt` (Pretrained YOLOv8 from Ultralytics)
+- **License Plate Detection:** `license_plate_detector.pt` (Custom-trained model)
+
+### OCR
+- **EasyOCR:** For reading license plate numbers from cropped images.
+
+### Tracking
+- **SORT (Simple Online and Realtime Tracking):** Used for tracking vehicles across frames. The SORT implementation is based on the original [SORT repository](https://github.com/abewley/sort).
+
+---
+
+## Folder Structure
+
+
+plate_detector/
+│
+├─ dataset_images/             # Input images for plate detection
+├─ helpers.py                  # Utility functions: CSV writer, OCR processing, formatting
+├─ interpolate_data.py         # Interpolates missing bounding boxes for consistent tracking
+├─ main.py                     # Video-based vehicle and plate detection pipeline
+├─ process_images.py           # Image-based vehicle and plate detection
+├─ visualizer.py               # Visualizes and annotates video with bounding boxes and license plates
+├─ license_plate_detector.pt   # Custom YOLO model for license plate detection
+├─ yolov8n.pt                  # Pretrained YOLOv8 model for vehicle detection
+├─ sort/                       # SORT tracker implementation (from original SORT repository)
+├─ sample.mp4                  # Sample input video
+└─ requirements.txt            # Python dependencies
+
+
+
+---
+```
+## Installation
+1. Clone this repository:
+```
+git clone <your-repo-url>
+cd plate_detector
+````
+
+2. Install dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+> Make sure to have Python 3.8+ installed. GPU is optional but recommended for faster processing.
+
+---
+
+## Usage
+
+### Video Detection
+
+```bash
+python main.py
+```
+
+* Detects vehicles and license plates in video files.
+* Tracks vehicles using SORT.
+* Outputs `test.csv` and `test_interpolated.csv` with bounding boxes and plate numbers.
+
+### Image Detection
+
+```bash
+python process_images.py
+```
+
+* Detects vehicles and license plates in images from the `dataset_images` folder.
+* Saves annotated images in the `outputs/` folder.
+* Outputs `results_images.csv` with detected plate data.
+
+### Visualization
+
+```bash
+python visualizer.py
+```
+
+* Reads `test_interpolated.csv`.
+* Overlays bounding boxes and cropped license plates on the video.
+* Outputs `out.mp4` with visualizations.
+
+---
+
+## Citation / Sources
+
+* **SORT Tracker:** [https://github.com/abewley/sort](https://github.com/abewley/sort)
+* **YOLOv8 Models:** [https://ultralytics.com/](https://ultralytics.com/)
+* **EasyOCR:** [https://github.com/JaidedAI/EasyOCR](https://github.com/JaidedAI/EasyOCR)
+
+---
+
+## License
+
+MIT License
+
+```
+
+---
+
+
