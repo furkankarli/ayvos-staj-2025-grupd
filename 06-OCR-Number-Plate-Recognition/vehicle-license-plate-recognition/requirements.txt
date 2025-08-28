@@ -1,0 +1,6 @@
+ultralytics==8.0.172
+opencv-python>=4.7.0
+numpy>=1.23.0
+pandas>=2.0.0
+easyocr>=1.6.2
+scipy>=1.10.0
